@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="/FromToDigitalProfit/favicon.png">
+  <title>From Zero To Digital Profit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Critical CSS inline for faster loading -->
+  <style>
+    :root {
+      --primary-color: #2563eb;
+      --primary-dark: #1e40af;
+      --accent-color: #FF6B00; /* Bright orange for better contrast */
+      --dark-blue: #1e3a8a;
+      --light-gray: #f8fafc;
+      --text-dark: #1e293b;
+      --text-light: #f8fafc;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: #fff;
+      scroll-behavior: smooth;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .hero {
+      background-color: var(--primary-color);
+      color: var(--text-light);
+      text-align: center;
+      padding: 80px 0;
+    }
+    
+    .cta-button {
+      background-color: var(--accent-color);
+      color: var(--text-light);
+      border: none;
+      border-radius: 8px;
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      text-align: center;
+    }
+  </style>
+  
+  <!-- Preload critical images -->
+  <link rel="preload" as="image" href="/FromToDigitalProfit/assets/images/optimized/book-cover.webp" type="image/webp">
+  <link rel="preload" as="image" href="/FromToDigitalProfit/assets/images/optimized/book-cover.jpg" type="image/jpeg">
+  <link rel="preload" as="image" href="/FromToDigitalProfit/assets/images/optimized/author-logo.png" type="image/png">
+  <link rel="preload" as="image" href="/FromToDigitalProfit/favicon.png" type="image/png">
+  
+  <link rel="stylesheet" href="/FromToDigitalProfit/styles.css">
+  
+  <!-- Load Supabase integration script before main script -->
+  <script src="/FromToDigitalProfit/supabase-integration.js"></script>
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+  
+  <!-- Scroll Position Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-dot" data-section="hero"></div>
+    <div class="scroll-dot" data-section="features"></div>
+    <div class="scroll-dot" data-section="why-ebook"></div>
+    <div class="scroll-dot" data-section="author-bio"></div>
+    <div class="scroll-dot" data-section="faq"></div>
+    <div class="scroll-dot" data-section="signup-form"></div>
+  </div>
+
+  <div id="root">
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <h1 class="animate-on-scroll fade-in-up">Go From Zero Experience to Your First $100 Online — In 7 Days</h1>
+        <p class="pain-point animate-on-scroll fade-in-up" data-delay="150">Struggling to monetize your skills? Start earning in 7 days—no tech experience needed.</p>
+        <p class="subtitle animate-on-scroll fade-in-up" data-delay="300">Step‑by‑step A–Z blueprint to build landing pages, funnels, copy & emails—no tech skills required.</p>
+        
+        <button class="cta-button scroll-to-form animate-on-scroll fade-in-up" data-delay="450">Yes! Send Me My Free Blueprint</button>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="animate-on-scroll fade-in-up">What You'll Learn Inside This FREE Guide:</h2>
+        
+        <div class="features-grid">
+          <div class="feature-card animate-on-scroll fade-in-up" data-delay="100">
+            <div class="icon"><i class="feather-icon" data-feather="layout"></i></div>
+            <h3>Build A Page That Converts Visitors Into Leads</h3>
+            <p>Discover how to build high-converting landing pages from scratch using simple, free no-code tools.</p>
+          </div>
+          
+          <div class="feature-card animate-on-scroll fade-in-up" data-delay="200">
+            <div class="icon"><i class="feather-icon" data-feather="filter"></i></div>
+            <h3>Create Funnels That Turn Prospects Into Buyers</h3>
+            <p>Master the art of creating sales funnels that guide your visitors step-by-step from curious prospect to paying client.</p>
+          </div>
+          
+          <div class="feature-card animate-on-scroll fade-in-up" data-delay="300">
+            <div class="icon"><i class="feather-icon" data-feather="edit-3"></i></div>
+            <h3>Write Copy That Sells Without Being Pushy</h3>
+            <p>Learn the secrets to writing words that sell. Turn your ideas into persuasive copy that grabs attention and drives action.</p>
+          </div>
+          
+          <div class="feature-card animate-on-scroll fade-in-up" data-delay="400">
+            <div class="icon"><i class="feather-icon" data-feather="mail"></i></div>
+            <h3>Automate High-Impact Emails That Convert</h3>
+            <p>Automate high‑impact emails that nurture leads into paying customers with strategies people actually enjoy reading.</p>
+          </div>
+          
+          <div class="feature-card animate-on-scroll fade-in-up" data-delay="500">
+            <div class="icon"><i class="feather-icon" data-feather="dollar-sign"></i></div>
+            <h3>Turn Your Skills Into $1,000/Month Revenue</h3>
+            <p>Uncover multiple ways to monetize your new digital skills for free, find your first clients, and build lasting relationships.</p>
+          </div>
+          
+          <div class="feature-card animate-on-scroll fade-in-up" data-delay="600">
+            <div class="icon"><i class="feather-icon" data-feather="trending-up"></i></div>
+            <h3>Scale Your Results With Proven Systems</h3>
+            <p>Learn how to create repeatable systems that scale your results without requiring more of your time or technical expertise.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Divider -->
+    <div class="slanted-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 48" fill="none">
+        <path fill="#f8fafc" d="M0 48h1440V0L0 48z"/>
+      </svg>
+    </div>
+
+    <!-- Why This E-Book Section -->
+    <section class="why-ebook" id="why-ebook">
+      <div class="container">
+        <h2 class="animate-on-scroll fade-in-up">Why This A–Z Blueprint Outperforms Every Free Guide Online</h2>
+        
+        <div class="benefits-card animate-on-scroll fade-in-up" data-delay="200">
+          <ul class="benefits-list">
+            <li class="animate-on-scroll fade-in-left" data-delay="300"><span class="benefit-icon"><i class="fas fa-check-circle"></i></span> <strong>100% Free</strong> — No catch, no credit card required</li>
+            <li class="animate-on-scroll fade-in-left" data-delay="400"><span class="benefit-icon"><i class="fas fa-check-circle"></i></span> <strong>Beginner-First</strong> — Zero experience? No problem</li>
+            <li class="animate-on-scroll fade-in-left" data-delay="500"><span class="benefit-icon"><i class="fas fa-check-circle"></i></span> <strong>Step-by-Step</strong> — Actionable tasks, not theory</li>
+            <li class="animate-on-scroll fade-in-left" data-delay="600"><span class="benefit-icon"><i class="fas fa-check-circle"></i></span> <strong>No-Code Tools</strong> — Drag, drop & launch</li>
+            <li class="animate-on-scroll fade-in-left" data-delay="700"><span class="benefit-icon"><i class="fas fa-check-circle"></i></span> <strong>Complete Roadmap</strong> — From skills to your first client</li>
+          </ul>
+        </div>
+        
+        <!-- Testimonials -->
+        <div class="testimonials animate-on-scroll fade-in-up" data-delay="800">
+          <div class="testimonial-slider">
+            <div class="testimonial-slide active">
+              <p>"I built my first ever funnel in under an hour—Mark's guide is gold!"</p>
+              <div class="testimonial-author">— Sarah K.</div>
+            </div>
+            <div class="testimonial-slide">
+              <p>"This blueprint helped me land my first client within 2 weeks of reading it. Incredible value!"</p>
+              <div class="testimonial-author">— Michael T.</div>
+            </div>
+            <div class="testimonial-slide">
+              <p>"As someone with zero tech skills, I was amazed at how easy Mark made everything. I'm now building pages for clients!"</p>
+              <div class="testimonial-author">— Jennifer L.</div>
+            </div>
+          </div>
+          <div class="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Author Bio -->
+    <section class="author-bio" id="author-bio">
+      <div class="container">
+        <div class="bio-content animate-on-scroll fade-in-up">
+          <div class="bio-image">
+            <img src="/FromToDigitalProfit/assets/images/optimized/author-logo.png" alt="The Mentor - Funnels & Email Marketing" width="150" height="150">
+          </div>
+          <div class="bio-text">
+            <h3>About the Author</h3>
+            <p>Mark Alonso is a digital marketing coach who's helped 500+ creators launch their first online offers. With over a decade of experience in digital marketing, Mark specializes in helping beginners turn their skills into profitable online businesses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="animate-on-scroll fade-in-up">Frequently Asked Questions</h2>
+        
+        <div class="accordion">
+          <div class="accordion-item animate-on-scroll fade-in-up" data-delay="200">
+            <div class="accordion-header">
+              <h3>Is this really free?</h3>
+              <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>Yep—no payment info needed. This complete blueprint is my gift to help you get started in digital marketing without any financial barriers.</p>
+            </div>
+          </div>
+          
+          <div class="accordion-item animate-on-scroll fade-in-up" data-delay="300">
+            <div class="accordion-header">
+              <h3>How long is the guide?</h3>
+              <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>72 pages of A–Z steps you can follow tonight. It's comprehensive but designed to be actionable—you can start implementing the strategies immediately.</p>
+            </div>
+          </div>
+          
+          <div class="accordion-item animate-on-scroll fade-in-up" data-delay="400">
+            <div class="accordion-header">
+              <h3>I have no tech skills—can I do this?</h3>
+              <span class="accordion-icon"><i class="fas fa-plus"></i></span>
+            </div>
+            <div class="accordion-content">
+              <p>Absolutely. Every tool is no-code. If you can use social media or send an email, you have all the technical skills needed to follow this blueprint.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Metrics -->
+    <section class="metrics">
+      <div class="container">
+        <div class="metrics-content animate-on-scroll fade-in-up">
+          <div class="metric">
+            <span class="metric-number">1,200+</span>
+            <span class="metric-label">downloads</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric">
+            <span class="metric-number">4.8 <i class="fas fa-star"></i></span>
+            <span class="metric-label">average rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA with Comprehensive Form -->
+    <section class="final-cta" id="signup-form">
+      <div class="container">
+        <h2 class="animate-on-scroll fade-in-up">Ready to Start Your Journey to Digital Profit?</h2>
+        <p class="animate-on-scroll fade-in-up" data-delay="200">Fill out the form below to get instant access to your FREE blueprint!</p>
+        
+        <!-- Form Container - Will be hidden after submission -->
+        <div id="form-container" class="form-container animate-on-scroll fade-in-up" data-delay="300">
+          <form id="comprehensive-form" class="comprehensive-form">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Your email address" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="phone">Phone Number (Optional)</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your phone number (optional)">
+            </div>
+            
+            <button type="submit" class="cta-button">Yes! Send Me My Free Blueprint</button>
+          </form>
+        </div>
+        
+        <!-- Thank You and Download Section - Hidden initially -->
+        <div id="thank-you-container" class="thank-you-container hidden">
+          <div class="success-animation">
+            <div class="checkmark-circle">
+              <div class="checkmark draw"></div>
+            </div>
+          </div>
+          
+          <h3 class="thank-you-title">Thank You!</h3>
+          <p class="thank-you-message">Your free blueprint is ready for download</p>
+          
+          <div class="download-app">
+            <div class="book-cover">
+              <!-- WebP with fallback to JPG for better performance -->
+              <picture>
+                <source srcset="/FromToDigitalProfit/assets/images/optimized/book-cover.webp" type="image/webp">
+                <source srcset="/FromToDigitalProfit/assets/images/optimized/book-cover.jpg" type="image/jpeg"> 
+                <img src="/FromToDigitalProfit/assets/images/optimized/book-cover.jpg" alt="From Zero to Digital Profit Book Cover" width="180" height="240">
+              </picture>
+            </div>
+            
+            <div class="download-info">
+              <h4>From Zero to Digital Profit</h4>
+              <p>Your Real-World Digital Skills Guide with Implementation Roadmap</p>
+              <p class="file-info"><i class="fas fa-file-pdf"></i> PDF • 72 pages</p>
+              
+              <a href="/FromToDigitalProfit/assets/From Zero to Digital Profit.pdf" download class="download-button">
+                <i class="fas fa-download"></i> Download Your Blueprint
+              </a>
+            </div>
+          </div>
+          
+          <div class="additional-info">
+            <p>We've also sent a copy to your email for future reference.</p>
+            <p>Have questions? Contact us at <a href="mailto:mark@consultingsupport.org">mark@consultingsupport.org</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <h3>Mark Alonso</h3>
+            <p>Built with 🔥 for future digital pros.</p>
+          </div>
+          
+          <div class="footer-links">
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="mailto:mark@consultingsupport.org" class="footer-link">Contact: mark@consultingsupport.org</a>
+          </div>
+          
+          <div class="footer-social">
+            <!-- Using text instead of icons for X and Threads to ensure visibility -->
+            <a href="https://x.com/The__Mentorr" target="_blank" rel="noopener" class="social-icon" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 18px;">𝕏</a>
+            <a href="https://www.instagram.com/the__mentorr" target="_blank" rel="noopener" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@the__mentorr" target="_blank" rel="noopener" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.threads.com/@the__mentorr" target="_blank" rel="noopener" class="social-icon" style="font-family: Arial, sans-serif; font-weight: bold; font-size: 18px;">@</a>
+          </div>
+        </div>
+        
+        <div class="footer-copyright">
+          <p>&copy; 2025 Mark Alonso. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-cta" id="sticky-cta">
+      <div class="container">
+        <button id="sticky-cta-button" class="sticky-cta-button scroll-to-form">
+          Grab Your Free Blueprint <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="/FromToDigitalProfit/script.js"></script>
+</body>
+</html>
